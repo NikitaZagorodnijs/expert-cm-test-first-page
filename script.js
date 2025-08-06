@@ -149,3 +149,25 @@ const trackNews = document.getElementById('carousel');
 
     updateActiveCardReview();
 
+const buttonKontakt = document.querySelector('.buttonKontakt');
+const popupWindow = document.querySelector('.popup-window');
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('.close-button');
+
+// Open the popup and show the overlay
+buttonKontakt.addEventListener('click', () => {
+    popupWindow.classList.add('show');
+    overlay.classList.add('show');
+});
+
+// Close the popup and hide the overlay
+closeButton.addEventListener('click', () => {
+    popupWindow.classList.remove('show');
+    overlay.classList.remove('show');
+});
+
+// Close the popup when clicking on the overlay
+overlay.addEventListener('click', () => {
+    popupWindow.classList.remove('show');
+    overlay.classList.remove('show');
+});
