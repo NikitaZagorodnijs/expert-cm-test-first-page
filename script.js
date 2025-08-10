@@ -1,8 +1,138 @@
+
+let rotation = 0;
+
+$("#showButton1Akt").on("click", function(){
+    $("#hiddenDivNo1Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton1Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+$("#showButton2Akt").on("click", function(){
+    $("#hiddenDivNo2Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton2Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+
+$("#showButton3Akt").on("click", function(){
+    $("#hiddenDivNo3Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton3Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+
+$("#showButton4Akt").on("click", function(){
+    $("#hiddenDivNo4Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton4Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+
+$("#showButton5Akt").on("click", function(){
+    $("#hiddenDivNo5Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton5Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+$("#showButton6Akt").on("click", function(){
+    $("#hiddenDivNo6Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton6Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+
+$("#showButton7Akt").on("click", function(){
+    $("#hiddenDivNo7Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton7Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+$("#showButton8Akt").on("click", function(){
+    $("#hiddenDivNo8Akt").slideToggle();
+    rotation = rotation - 180;
+    let element = $("#showButton8Akt");
+    $({degrees: rotation + 180}).animate({degrees:rotation} , {
+        duration : 400,
+        step : function(now){
+            element.css({
+                transform:'rotate(' + now + 'deg)'
+            })
+        }
+    })
+   
+})
+
+
+
+
+
+
 // JavaScript to center the entire carousel on active card depending on direction with swipe and pagination
 const trackNews = document.getElementById('carousel');
-  const cardsNews = trackNews.querySelectorAll('.card');
-  const leftBtnNews = document.querySelector('.arrow-left');
-  const rightBtnNews = document.querySelector('.arrow-right');
+const cardsNews = trackNews.querySelectorAll('.card');
+const leftBtnNews = document.querySelector('.arrow-left');
+const rightBtnNews = document.querySelector('.arrow-right');
+const buttonKontakt = document.querySelector('.buttonKontakt');
+const popupWindow = document.querySelector('.popup-window');
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('.close-button');
+
   let activeIndexNews = 2;
 
   function updateActiveCardNews() {
@@ -73,6 +203,29 @@ const trackNews = document.getElementById('carousel');
 
   updateActiveCardNews();
   //  reviews
+  // Open the popup and show the overlay
+buttonKontakt.addEventListener('click', () => {
+    popupWindow.classList.add('show');
+    overlay.classList.add('show');
+});
+
+// Close the popup and hide the overlay
+closeButton.addEventListener('click', () => {
+    popupWindow.classList.remove('show');
+    overlay.classList.remove('show');
+});
+
+// Close the popup when clicking on the overlay
+overlay.addEventListener('click', () => {
+    popupWindow.classList.remove('show');
+    overlay.classList.remove('show');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var currentYear = new Date().getFullYear();
+    document.getElementById('dateFooter').textContent = currentYear;
+   });
+
 
 
  const trackReview = document.getElementById('carouselReviews');
@@ -149,25 +302,5 @@ const trackNews = document.getElementById('carousel');
 
     updateActiveCardReview();
 
-const buttonKontakt = document.querySelector('.buttonKontakt');
-const popupWindow = document.querySelector('.popup-window');
-const overlay = document.querySelector('.overlay');
-const closeButton = document.querySelector('.close-button');
 
-// Open the popup and show the overlay
-buttonKontakt.addEventListener('click', () => {
-    popupWindow.classList.add('show');
-    overlay.classList.add('show');
-});
-
-// Close the popup and hide the overlay
-closeButton.addEventListener('click', () => {
-    popupWindow.classList.remove('show');
-    overlay.classList.remove('show');
-});
-
-// Close the popup when clicking on the overlay
-overlay.addEventListener('click', () => {
-    popupWindow.classList.remove('show');
-    overlay.classList.remove('show');
-});
+   
