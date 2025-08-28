@@ -553,6 +553,79 @@ background-image: url(images/backforwhatwedo.png);
 }
 
 /* katalog */
+.katalogsWrap{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    
+}
+.katalogsBlock{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 1180px;
+    flex-wrap: wrap;
+}
+.katalogsLogo{
+    width: 200px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.aparatiImg{
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+.aparatiH2{
+    margin: 0;
+    padding: 0;
+    text-wrap: wrap;
+    width: 270px;
+}
+.aparatiH2Cena{
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+}
+.borderTop{
+    width: 320px;
+    border: 1px solid white;
+    border-radius: 30px;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    opacity: 50%;
+}
+.borderRight{
+    height: 360px;
+    border: 1px solid white;
+    border-radius: 30px;
+    position: absolute;
+    top: 20px;
+    right: -25px;
+    opacity: 50%;
+}
+.borderBottom{
+    width: 320px;
+    border: 1px solid white;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    opacity: 50%;
+}
+
+.aparatBlock {
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
 
 
 /* form */
